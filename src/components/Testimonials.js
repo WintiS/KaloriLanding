@@ -1,33 +1,52 @@
 import React from 'react';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const Testimonials = () => {
   const testimonials = [
     {
       text: "Kalori mi změnilo život. Už nemusím složitě počítat kalorie, stačí vyfotit jídlo a mám hotovo!",
-      align: "left"
+      align: "left",
+      picture: "/assets/female4.jpg" // Add your image URL here
     },
     {
       text: "Nejlepší aplikace na sledování stravy, kterou jsem kdy používala. Intuitivní a rychlá.",
-      align: "right"
+      align: "right",
+      picture: "/assets/female3.jpg" // Add your image URL here
     },
     {
-      text: "Konečně aplikace, která skutečně funguje. AI rozpozná všechno přesně a já mám přehled o své stravě.",
-      align: "left"
+      text: "Konečně aplikace, u které vydržím dlouho a nepřestanu ji používat",
+      align: "left",
+      picture: "/assets/female1.jpg" // Add your image URL here
     }
   ];
+
+  const [ref, isVisible] = useScrollAnimation({ threshold: 0.1 });
 
   return (
     <section className="px-4 py-12 md:py-16 bg-white">
       <div className="max-w-6xl mx-auto">
-        <div className="space-y-6">
+        <div ref={ref} className="space-y-4 md:space-y-6">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className={`bg-gray-100 rounded-lg p-6 ${
-                testimonial.align === 'right' ? 'ml-auto md:ml-0 md:mr-auto' : 'mr-auto'
-              } max-w-md md:max-w-lg`}
+              className={`card-hover bg-white rounded-xl p-5 md:p-7 shadow-lg border border-gray-100 ${
+                testimonial.align === 'right' ? 'ml-auto' : 'mr-auto'
+              } max-w-xs md:max-w-md transition-all duration-500 ${
+                isVisible ? `opacity-100 ${testimonial.align === 'right' ? 'translate-x-0' : 'translate-x-0'}` : 
+                `opacity-0 ${testimonial.align === 'right' ? 'translate-x-8' : '-translate-x-8'}`
+              }`}
+              style={{ transitionDelay: `${index * 150}ms` }}
             >
-              <p className="text-gray-700 text-sm md:text-base">{testimonial.text}</p>
+              <div className="flex items-start gap-3">
+                <div className="flex-shrink-0 w-10 h-10 rounded-full overflow-hidden border-2 border-gray-200">
+                  <img 
+                    src={testimonial.picture} 
+                    alt="Testimonial author" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <p className="text-gray-700 text-sm md:text-base leading-relaxed flex-1">{testimonial.text}</p>
+              </div>
             </div>
           ))}
         </div>

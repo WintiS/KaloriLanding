@@ -10,42 +10,50 @@ import BeforeAfter from './components/BeforeAfter';
 import Features from './components/Features';
 import Benefits from './components/Benefits';
 import Options from './components/Options';
+import FAQ from './components/FAQ';
+import AboutUs from './components/AboutUs';
 import Footer from './components/Footer';
 
 function App() {
   return (
     <div className="App min-h-screen bg-white">
       <Header />
-      <Hero />
+      <div className="pt-16 md:pt-20">
+        <Hero />
       <Testimonials />
       <ProblemStatement />
       <Experiences />
       <HowItWorks />
       <CTA 
-        title="Chcete přes všechny jíst normálně, ale nepřibrat?"
-        description="Kalori vám pomůže jíst normálně a přitom mít kontrolu nad svou váhou. Vyzkoušejte to ještě dnes."
+        title="Chcete přes svátky jíst normálně, ale nepřibrat?"
+        description="Pak si stáhněte Kalori zdarma a začněte ještě dnes!"
       />
       <BeforeAfter />
       <Features />
       <CTA 
         title="Toto všechno a ještě více, vás čeká uvnitř!"
-        description="Vyzkoušejte Kalori na 7 dní zdarma a zjistěte, jak snadné může být sledování stravy."
+        description=""
+        variant="no-box"
+      />
+      <CTA 
+        title="Vyzkoušejte Kalori na 7 dní zdarma"
+        description="Pokud se vám nebude líbit, neplatíte nic, ale my věříme, že si Kalori zamilujete :)"
+        variant="default"
       />
       <Options />
-      <Benefits />
+      <FAQ />
       <CTA 
-        title="Stáhněte Kalori a získejte Vánoční 20% slevu!"
-        description="Omezená nabídka! Stáhněte aplikaci nyní a získejte speciální vánoční slevu 20%."
+        title="Stáhněte Kalori a získejte Vánoční slevu 20%"
+        description="Ušetřete čas a mějte přehled o jídle už dnes! Vánoční sleva platí jen do 20.12."
+        variant="christmas"
       />
-      <section className="px-4 py-12 md:py-16 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <div className="w-full h-48 sm:h-64 md:h-96 bg-gray-200 rounded-lg mb-8"></div>
-          <CTA 
-            title="Jste připraven?"
-            description="Začněte ještě dnes a získejte kontrolu nad svou stravou. Stáhněte Kalori nyní."
-          />
-        </div>
-      </section>
+      <AboutUs />
+     
+      <CTA 
+        title="Jste připraveni?"
+        description="Vyzkoušejte Kalori zdarma ještě dnes! Pokud se vám nebude líbit, nic neplatíte :)"
+      />
+      </div>
       <Footer />
     </div>
   );

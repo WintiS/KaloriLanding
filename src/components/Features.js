@@ -1,4 +1,5 @@
 import React from 'react';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const Features = () => {
   const features = [
@@ -34,28 +35,38 @@ const Features = () => {
     }
   ];
 
+  const [ref, isVisible] = useScrollAnimation({ threshold: 0.1 });
+
   return (
     <section className="px-4 py-12 md:py-16 bg-white">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 text-center">
-          Co vás čeká uvnitř?
+        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 md:mb-12 text-center">
+          Co všechno umí?
         </h2>
-        <div className="space-y-12 mt-12">
-          {features.map((feature) => (
-            <div key={feature.number} className="flex flex-col md:flex-row gap-6 items-start">
+        <div ref={ref} className="space-y-8 md:space-y-12">
+          {features.map((feature, index) => (
+            <div
+              key={feature.number}
+              className={`flex flex-col md:flex-row gap-4 md:gap-6 items-start card-hover bg-gradient-to-br from-white to-gray-50 rounded-xl p-6 md:p-8 shadow-md border border-gray-100 transition-all duration-500 ${
+                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+              }`}
+              style={{ transitionDelay: `${index * 100}ms` }}
+            >
               <div className="flex-shrink-0">
-                <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-gray-300 flex items-center justify-center">
-                  <span className="text-xl md:text-2xl font-bold text-gray-700">{feature.number}</span>
+                <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-gradient-primary flex items-center justify-center shadow-lg transition-transform duration-300 hover:scale-110">
+                  <span className="text-2xl md:text-3xl font-bold text-white">{feature.number}</span>
                 </div>
               </div>
               <div className="flex-1">
-                <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">
+                <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3">
                   {feature.title}
                 </h3>
-                <p className="text-base text-gray-600 mb-4">
+                <p className="text-base md:text-lg text-gray-600 mb-4 leading-relaxed">
                   {feature.description}
                 </p>
-                <div className="w-full h-40 sm:h-48 md:h-56 bg-gray-200 rounded-lg"></div>
+                <div className="w-full h-32 sm:h-40 md:h-48 bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl shadow-inner overflow-hidden relative">
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-primary-dark/10"></div>
+                </div>
               </div>
             </div>
           ))}
