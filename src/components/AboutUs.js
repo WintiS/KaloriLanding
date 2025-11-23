@@ -5,7 +5,7 @@ const AboutUs = () => {
   const [ref, isVisible] = useScrollAnimation({ threshold: 0.2 });
 
   return (
-    <section className="px-4 py-12 md:py-16 bg-gradient-to-b from-white to-gray-50">
+    <section className="px-4 py-12 md:py-16 bg-gradient-to-b from-white to-gray-50 text-center">
       <div className="max-w-4xl mx-auto">
         <div
           ref={ref}
@@ -13,7 +13,7 @@ const AboutUs = () => {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-8 md:mb-10 text-center">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-8 md:mb-10">
             Něco krátce<br />o nás
           </h2>
           

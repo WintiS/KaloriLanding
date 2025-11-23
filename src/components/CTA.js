@@ -14,7 +14,7 @@ const CTA = ({ title, description, showBadges = true, variant = 'default' }) => 
     : 'p-0';
 
   return (
-    <section className={`px-4 py-12 md:py-16 ${isChristmas ? 'bg-gradient-to-b from-red-50/30 to-green-50/30' : 'bg-white'}`}>
+    <section className={`px-4 py-12 md:py-16 `}>
       <div className="max-w-2xl mx-auto">
         <div
           ref={ref}
@@ -90,7 +90,7 @@ const CTA = ({ title, description, showBadges = true, variant = 'default' }) => 
                   <img
                     src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&releaseDate=1609459200"
                     alt="Download on the App Store"
-                    className="h-11 sm:h-[52px] w-auto rounded-lg"
+                    className="h-10 sm:h-[52px] w-auto rounded-lg"
                   />
                 </a>
                 <a
@@ -102,7 +102,7 @@ const CTA = ({ title, description, showBadges = true, variant = 'default' }) => 
                   <img
                     src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
                     alt="Get it on Google Play"
-                    className="h-[60px] sm:h-[68px] w-auto rounded-lg"
+                    className="h-[55px] sm:h-[68px] w-auto rounded-lg"
                   />
                 </a>
               </div>

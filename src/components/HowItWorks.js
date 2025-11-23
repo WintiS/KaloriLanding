@@ -5,61 +5,100 @@ const HowItWorks = () => {
   const steps = [
     {
       number: 1,
-      title: "Stáhněte aplikaci a přihlaste se",
-      description: "Stáhněte Kalori z App Store nebo Google Play a vytvořte si účet během několika sekund."
+      title: "Stáhnete aplikaci a přihlásíte se",
+      description: "Jednoduše si stáhnete Kalori, vyplníte pár údajů o sobě (ať vám appka může doporučit správné cíle) a jste uvnitř. Žádná věda, jen pár vteřin a máte hotovo."
     },
     {
       number: 2,
-      title: "Zadejte své první jídlo",
-      description: "Vyfoťte své jídlo nebo ho jednoduše popište. AI automaticky rozpozná všechny ingredience."
+      title: "Zapište své první jídlo",
+      description: "Po přihlášení uvidíte svůj denní přehled. V pravém dolním rohu najdete \"plus\" tlačítko. Na tlačítko klikněte a můžete přidat jídlo. Vše je jasné a přehledné, žádné zmatky."
     },
     {
       number: 3,
-      title: "Vyberte si svůj cíl",
-      description: "Nastavte si svůj cíl - hubnutí, udržení váhy nebo přibírání. Kalori vám pomůže ho dosáhnout."
+      title: "Vyberte možnost zápisu",
+      description: "Zobrazí se vám tři možnosti, jak jídlo přidat: vyfotit jídlo (nejrychlejší možnost), vybrat jídlo z galerie nebo krátce popsat, co jste měli. Doporučujeme možnost \"Kamera\". Je to nejrychlejší způsob, jak mít celý den hotový už za pár minut."
     },
     {
       number: 4,
-      title: "Mějte hotovo!",
-      description: "A to je vše! Kalori vám automaticky počítá kalorie a živiny. Jednoduše a rychle."
+      title: "Máte hotovo!",
+      description: "Vše jste zvládli bez chyby, gratulace! Samotný zápis zabere jen pár vteřin a máte přehled o celém dni. A pokud si pořád nejste jisti, zda Kalori je pro vás to pravé, zkuste appku zdarma ještě dnes!"
     }
   ];
 
   const [ref, isVisible] = useScrollAnimation({ threshold: 0.1 });
 
   return (
-    <section className="px-4 py-12 md:py-16 bg-gradient-to-b from-white to-gray-50">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 md:mb-12 text-center">
-          Jak Kalori funguje?
-        </h2>
-        <div ref={ref} className="space-y-8 md:space-y-12">
-          {steps.map((step, index) => (
-            <div
-              key={step.number}
-              className={`flex flex-col md:flex-row gap-4 md:gap-6 items-start card-hover bg-white rounded-xl p-6 md:p-8 shadow-md transition-all duration-500 ${
-                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-              }`}
-              style={{ transitionDelay: `${index * 150}ms` }}
-            >
-              <div className="flex-shrink-0">
-                <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-gradient-primary flex items-center justify-center shadow-lg transition-transform duration-300 hover:scale-110">
-                  <span className="text-2xl md:text-3xl font-bold text-white">{step.number}</span>
+    <section className="relative px-4 py-16 md:py-24 bg-gradient-to-b from-white via-gray-50/30 to-white overflow-hidden">
+      {/* Decorative background elements */}
+      <div className="absolute top-20 right-0 w-72 h-72 bg-primary opacity-5 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-20 left-0 w-96 h-96 bg-primary-dark opacity-5 rounded-full blur-3xl"></div>
+      
+      <div className="relative max-w-5xl mx-auto">
+        <div className="text-center mb-16 md:mb-20">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+            Jak Kalori funguje?
+          </h2>
+          <div className="w-24 h-1 bg-gradient-primary mx-auto rounded-full"></div>
+        </div>
+        
+        <div ref={ref} className="space-y-20 md:space-y-28">
+          {steps.map((step, index) => {
+            const isLeft = index % 2 === 0;
+            const textAlignment = isLeft ? 'text-left' : 'text-right';
+            const itemsAlignment = isLeft ? 'items-start' : 'items-end';
+            
+            return (
+              <div
+                key={step.number}
+                className={`relative flex flex-col transition-all duration-700 ${
+                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                }`}
+                style={{ transitionDelay: `${index * 150}ms` }}
+              >
+                {/* Number Circle - Always Centered with enhanced styling */}
+                <div className="mb-8 flex justify-center">
+                  <div className="relative group">
+                    <div className="absolute inset-0 bg-gradient-primary rounded-full blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
+                    <div className="relative w-16 h-16 md:w-20 md:h-20 rounded-full bg-gradient-primary flex items-center justify-center shadow-xl transform transition-all duration-300 group-hover:scale-110">
+                      <span className="text-3xl md:text-4xl font-bold text-white drop-shadow-lg">{step.number}</span>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Content Card with alternating alignment */}
+                <div className={`flex flex-col ${itemsAlignment} ${textAlignment} relative`}>
+                  {/* Decorative accent line */}
+                  <div className={`absolute top-0 ${isLeft ? 'left-0' : 'right-0'} w-1 h-16 bg-gradient-primary rounded-full opacity-20`}></div>
+                  
+                  {/* Content wrapper with subtle background */}
+                  <div className={`relative bg-white/80 backdrop-blur-sm rounded-2xl p-6 md:p-8 lg:p-10 shadow-lg border border-gray-100/50 transition-all duration-300 hover:shadow-xl hover:border-primary/20 ${isLeft ? 'ml-0' : 'mr-0'} max-w-2xl`}>
+                    {/* Title */}
+                    <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-5 leading-tight">
+                      {step.title}
+                    </h3>
+                    
+                    {/* Description */}
+                    <p className="text-base md:text-lg text-gray-700 mb-6 leading-relaxed">
+                      {step.description}
+                    </p>
+                    
+                    {/* Placeholder Image with enhanced styling */}
+                    <div className="relative w-full max-w-md h-56 md:h-72 rounded-xl overflow-hidden shadow-md group">
+                      <div className="absolute inset-0 bg-gradient-to-br from-gray-100 via-gray-200 to-gray-300"></div>
+                      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-primary-dark/10 opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="w-16 h-16 rounded-full bg-white/30 backdrop-blur-sm flex items-center justify-center">
+                          <svg className="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div className="flex-1">
-                <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3">
-                  {step.title}
-                </h3>
-                <p className="text-base md:text-lg text-gray-600 mb-4 leading-relaxed">
-                  {step.description}
-                </p>
-                <div className="w-full h-32 sm:h-40 md:h-48 bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl shadow-inner overflow-hidden relative">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-primary-dark/10"></div>
-                </div>
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

@@ -31,7 +31,7 @@ const Testimonials = () => {
               key={index}
               className={`card-hover bg-white rounded-xl p-5 md:p-7 shadow-lg border border-gray-100 ${
                 testimonial.align === 'right' ? 'ml-auto' : 'mr-auto'
-              } max-w-xs md:max-w-md transition-all duration-500 ${
+              } max-w-[18rem] md:max-w-sm transition-all duration-500 ${
                 isVisible ? `opacity-100 ${testimonial.align === 'right' ? 'translate-x-0' : 'translate-x-0'}` : 
                 `opacity-0 ${testimonial.align === 'right' ? 'translate-x-8' : '-translate-x-8'}`
               }`}

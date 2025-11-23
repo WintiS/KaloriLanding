@@ -32,7 +32,7 @@ const Experiences = () => {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 text-center">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 text-center">
             Zkušenosti s Kalori ostatních
           </h2>
           <p className="text-base md:text-lg text-gray-600 mb-10 md:mb-12 text-center">

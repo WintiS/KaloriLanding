@@ -13,7 +13,7 @@ const ProblemStatement = () => {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 text-center">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 text-center">
             Vidíte se v této situaci?
           </h2>
           <p className="text-base md:text-lg text-gray-600 leading-relaxed text-center">

@@ -14,7 +14,7 @@ const Hero = () => {
   ];
 
   return (
-    <section className="relative px-4 py-12 md:py-20 bg-gradient-hero overflow-hidden">
+    <section className="relative px-4 py-12 md:py-20 bg-gradient-hero overflow-hidden mt-[-1rem]">
       {/* Decorative background elements */}
       <div className="absolute top-0 right-0 w-64 h-64 bg-primary opacity-10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary opacity-5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
@@ -25,11 +25,10 @@ const Hero = () => {
           className={`transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
         >
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-            Jedna fotka, <span className="gradient-text">Dvě minuty.</span> Přehled jídla na celý den.
+            Jedna fotka, <span className="gradient-text">10 vteřin.</span> Přehled o jídle celý den.
           </h1>
           <p className="text-base md:text-lg text-gray-700 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Vyfoťte své jídlo a AI vám okamžitě spočítá kalorie, bílkoviny, sacharidy a tuky. 
-            Jednoduše takto získáte dlouhodobý přehled o vaší stravě.
+          Jedna fotka stačí. Kalori spočítá vše za vás. Bez zdlouhavého zapisování, bez vážení, bez stresu.
           </p>
         </div>
         

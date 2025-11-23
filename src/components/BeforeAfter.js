@@ -3,19 +3,22 @@ import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const BeforeAfter = () => {
   const beforeItems = [
-    "Složité počítání kalorií",
-    "Hodiny strávené nad jídelníčkem",
-    "Nejistota, zda je to správně",
-    "Frustrace z komplikovaných aplikací",
-    "Ztráta motivace"
+    "Nejíte “špatně”, ale stejně přibíráte a nevíte proč",
+    "Jíte od oka a pořád tipujete, jestli si můžete dovolit ještě kousek",
+    "V restauraci vůbec netušíte, kolik vaše jídlo má kalorií a stresujete se",
+    "Kalorické tabulky a vážení vás po pár týdnech unaví, je to neudržitelné",
+    "Přes svátky ztrácíte kontrolu, všude je jídlo a jde to snadno “přestřelit”",
+    "Chcete být fit, ale nechcete žít s váhou a kalkulačkou pořád při sobě"
   ];
 
   const afterItems = [
-    "Jednoduché focení jídla",
-    "Přehled za 2 minuty",
-    "Přesné výpočty díky AI",
-    "Intuitivní design",
-    "Dlouhodobá motivace"
+    "Vyfotíte jídlo a během vteřin víte, jak na tom jste",
+    "Konečně máte jistotu. Víte, co si můžete dovolit bez přibírání",
+    "Přehled o celém dni za 2 minuty, žádné zbytečné přemýšlení",
+    "I v restauraci víte, co objednat a kolik toho sníst",
+    "Jíte normálně, ale máte hladinu pod kontrolou",
+    "Nemusíte držet diety. Konečně máte systém, který je udržitelný",
+    "Přes svátky si dopřejete, ale nepřiberete"
   ];
 
   const [ref, isVisible] = useScrollAnimation({ threshold: 0.1 });
@@ -23,7 +26,7 @@ const BeforeAfter = () => {
   return (
     <section className="px-4 py-12 md:py-16 bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 md:mb-12 text-center">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-8 md:mb-12 text-center">
           Před Kalori / Po Kalori
         </h2>
         <div ref={ref} className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
@@ -32,7 +35,7 @@ const BeforeAfter = () => {
               isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'
             }`}
           >
-            <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-red-500"></span>
               Před
             </h3>
@@ -55,7 +58,7 @@ const BeforeAfter = () => {
             }`}
             style={{ transitionDelay: '150ms' }}
           >
-            <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-primary"></span>
               Po
             </h3>

@@ -27,6 +27,7 @@ function App() {
       <CTA 
         title="Chcete přes svátky jíst normálně, ale nepřibrat?"
         description="Pak si stáhněte Kalori zdarma a začněte ještě dnes!"
+      
       />
       <BeforeAfter />
       <Features />
@@ -52,6 +53,7 @@ function App() {
       <CTA 
         title="Jste připraveni?"
         description="Vyzkoušejte Kalori zdarma ještě dnes! Pokud se vám nebude líbit, nic neplatíte :)"
+        variant="default"
       />
       </div>
       <Footer />

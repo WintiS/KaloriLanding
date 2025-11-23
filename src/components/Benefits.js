@@ -25,7 +25,7 @@ const Benefits = () => {
             isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-8 scale-95'
           }`}
         >
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
             Vyzkoušejte Kalori na 7 dní zdarma
           </h2>
           <div className="space-y-3 md:space-y-4 mb-8 text-left">
