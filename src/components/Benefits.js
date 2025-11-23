@@ -21,8 +21,8 @@ const Benefits = () => {
       <div className="max-w-4xl mx-auto">
         <div
           ref={ref}
-          className={`bg-gradient-to-br from-white to-gray-50 rounded-2xl p-8 md:p-12 text-center shadow-xl border border-gray-200 transition-all duration-700 ${
-            isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-8 scale-95'
+          className={`bg-gradient-to-br from-white to-gray-50 rounded-2xl p-8 md:p-12 text-center shadow-xl border border-gray-200 transition-all duration-400 ${
+            isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-4 scale-[0.97]'
           }`}
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
@@ -32,17 +32,17 @@ const Benefits = () => {
             {benefits.map((benefit, index) => (
               <div
                 key={index}
-                className={`flex items-start gap-3 md:gap-4 transition-all duration-500 ${
-                  isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'
+                className={`flex items-start gap-3 md:gap-4 transition-all duration-300 ${
+                  isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-2'
                 }`}
-                style={{ transitionDelay: `${index * 100 + 200}ms` }}
+                style={{ transitionDelay: `${index * 50 + 100}ms` }}
               >
                 <span className="text-primary text-xl md:text-2xl flex-shrink-0 font-bold">✓</span>
                 <p className="text-base md:text-lg text-gray-700 leading-relaxed">{benefit}</p>
               </div>
             ))}
           </div>
-          <div className="text-center transition-all duration-700 delay-500">
+          <div className="text-center transition-all duration-400 delay-250">
             <DownloadBadges />
           </div>
         </div>

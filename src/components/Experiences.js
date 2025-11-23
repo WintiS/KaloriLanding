@@ -28,8 +28,8 @@ const Experiences = () => {
       <div className="max-w-4xl mx-auto">
         <div
           ref={ref}
-          className={`transition-all duration-700 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          className={`transition-all duration-400 ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
           }`}
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 text-center">
@@ -43,10 +43,10 @@ const Experiences = () => {
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className={`card-hover bg-white rounded-2xl p-6 md:p-8 shadow-lg border border-gray-200 transition-all duration-500 relative overflow-hidden ${
-                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                className={`card-hover bg-white rounded-2xl p-6 md:p-8 shadow-lg border border-gray-200 transition-all duration-300 relative overflow-hidden ${
+                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
                 }`}
-                style={{ transitionDelay: `${index * 150}ms` }}
+                style={{ transitionDelay: `${index * 100}ms` }}
               >
                 {/* Decorative accent line */}
                 <div className="absolute top-0 left-0 w-1 h-full bg-gradient-primary"></div>

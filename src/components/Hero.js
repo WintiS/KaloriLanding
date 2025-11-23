@@ -22,7 +22,7 @@ const Hero = () => {
       <div className="relative max-w-4xl mx-auto text-center">
         <div
           ref={ref}
-          className={`transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+          className={`transition-all duration-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
         >
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
             Jedna fotka, <span className="gradient-text">10 vteřin.</span> Přehled o jídle celý den.
@@ -33,7 +33,7 @@ const Hero = () => {
         </div>
         
         <div
-          className={`mb-8 transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+          className={`mb-8 transition-all duration-400 delay-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
         >
           <div className="w-full h-48 sm:h-64 md:h-80 bg-white rounded-xl shadow-2xl overflow-hidden relative">
             <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary-dark/20"></div>
@@ -42,13 +42,13 @@ const Hero = () => {
         </div>
         
         <div
-          className={`mb-6 transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+          className={`mb-6 transition-all duration-400 delay-150 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
         >
           <DownloadBadges />
         </div>
         
         <div
-          className={`mt-8 transition-all duration-700 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+          className={`mt-8 transition-all duration-400 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
         >
           <div className="flex items-center justify-center gap-3 md:gap-4">
             {/* Toggle Switch */}

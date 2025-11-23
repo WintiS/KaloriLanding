@@ -17,8 +17,8 @@ const CTA = ({ title, description, showBadges = true, variant = 'default' }) => 
       <div className="max-w-2xl mx-auto">
         <div
           ref={ref}
-          className={`${boxClasses} text-center transition-all duration-700 ${
-            isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-8 scale-95'
+          className={`${boxClasses} text-center transition-all duration-400 ${
+            isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-4 scale-[0.97]'
           }`}
         >
           {/* Christmas Decorations */}
@@ -78,13 +78,13 @@ const CTA = ({ title, description, showBadges = true, variant = 'default' }) => 
             </p>
           )}
           {showBadges && (
-            <div className="transition-all duration-700 delay-300 flex justify-center">
+            <div className="transition-all duration-400 delay-150 flex justify-center">
               <div className="flex flex-row gap-4 items-center">
                 <a
                   href="https://apps.apple.com/us/app/kalori-ai-kalorické-tabulky/id6746693207"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block transition-all duration-300 hover:scale-105 hover:shadow-lg rounded-lg"
+                  className="inline-block transition-all duration-200 hover:scale-[1.02] hover:shadow-lg rounded-lg"
                 >
                   <img
                     src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&releaseDate=1609459200"
@@ -96,7 +96,7 @@ const CTA = ({ title, description, showBadges = true, variant = 'default' }) => 
                   href="https://play.google.com/store/apps/details?id=cz.wintis.kalori"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block transition-all duration-300 hover:scale-105 hover:shadow-lg rounded-lg"
+                  className="inline-block transition-all duration-200 hover:scale-[1.02] hover:shadow-lg rounded-lg"
                 >
                   <img
                     src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"

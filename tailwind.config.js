@@ -17,6 +17,12 @@ module.exports = {
         'gradient-primary': 'linear-gradient(135deg, #6be08c 0%, #4fc76f 100%)',
         'gradient-hero': 'linear-gradient(135deg, #f0fdf4 0%, #dcfce7 50%, #bbf7d0 100%)',
       },
+      transitionDuration: {
+        '400': '400ms',
+      },
+      transitionDelay: {
+        '250': '250ms',
+      },
       animation: {
         'fade-in': 'fadeIn 0.6s ease-in-out',
         'fade-in-up': 'fadeInUp 0.6s ease-out',

@@ -6,7 +6,8 @@ const HowItWorks = () => {
     {
       number: 1,
       title: "Stáhnete aplikaci a přihlásíte se",
-      description: "Jednoduše si stáhnete Kalori, vyplníte pár údajů o sobě (ať vám appka může doporučit správné cíle) a jste uvnitř. Žádná věda, jen pár vteřin a máte hotovo."
+      description: "Jednoduše si stáhnete Kalori, vyplníte pár údajů o sobě (ať vám appka může doporučit správné cíle) a jste uvnitř. Žádná věda, jen pár vteřin a máte hotovo.",
+      
     },
     {
       number: 2,
@@ -21,7 +22,8 @@ const HowItWorks = () => {
     {
       number: 4,
       title: "Máte hotovo!",
-      description: "Vše jste zvládli bez chyby, gratulace! Samotný zápis zabere jen pár vteřin a máte přehled o celém dni. A pokud si pořád nejste jisti, zda Kalori je pro vás to pravé, zkuste appku zdarma ještě dnes!"
+      description: "Vše jste zvládli bez chyby, gratulace! Samotný zápis zabere jen pár vteřin a máte přehled o celém dni. A pokud si pořád nejste jisti, zda Kalori je pro vás to pravé, zkuste appku zdarma ještě dnes!",
+      imageUrl: "/assets/screenshot1.png"
     }
   ];
 
@@ -50,16 +52,16 @@ const HowItWorks = () => {
             return (
               <div
                 key={step.number}
-                className={`relative flex flex-col transition-all duration-700 ${
-                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                className={`relative flex flex-col transition-all duration-400 ${
+                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
                 }`}
-                style={{ transitionDelay: `${index * 150}ms` }}
+                style={{ transitionDelay: `${index * 100}ms` }}
               >
                 {/* Number Circle - Always Centered with enhanced styling */}
                 <div className="mb-8 flex justify-center">
                   <div className="relative group">
-                    <div className="absolute inset-0 bg-gradient-primary rounded-full blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
-                    <div className="relative w-16 h-16 md:w-20 md:h-20 rounded-full bg-gradient-primary flex items-center justify-center shadow-xl transform transition-all duration-300 group-hover:scale-110">
+                    <div className="absolute inset-0 bg-gradient-primary rounded-full blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-200"></div>
+                    <div className="relative w-16 h-16 md:w-20 md:h-20 rounded-full bg-gradient-primary flex items-center justify-center shadow-xl transform transition-all duration-200 group-hover:scale-105">
                       <span className="text-3xl md:text-4xl font-bold text-white drop-shadow-lg">{step.number}</span>
                     </div>
                   </div>
@@ -71,7 +73,7 @@ const HowItWorks = () => {
                   <div className={`absolute top-0 ${isLeft ? 'left-0' : 'right-0'} w-1 h-16 bg-gradient-primary rounded-full opacity-20`}></div>
                   
                   {/* Content wrapper with subtle background */}
-                  <div className={`relative bg-white/80 backdrop-blur-sm rounded-2xl p-6 md:p-8 lg:p-10 shadow-lg border border-gray-100/50 transition-all duration-300 hover:shadow-xl hover:border-primary/20 ${isLeft ? 'ml-0' : 'mr-0'} max-w-2xl`}>
+                  <div className={`relative bg-white/80 backdrop-blur-sm rounded-2xl p-6 md:p-8 lg:p-10 shadow-lg border border-gray-100/50 transition-all duration-200 hover:shadow-xl hover:border-primary/20 ${isLeft ? 'ml-0' : 'mr-0'} max-w-2xl`}>
                     {/* Title */}
                     <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-5 leading-tight">
                       {step.title}
@@ -82,18 +84,29 @@ const HowItWorks = () => {
                       {step.description}
                     </p>
                     
-                    {/* Placeholder Image with enhanced styling */}
-                    <div className="relative w-full max-w-md h-56 md:h-72 rounded-xl overflow-hidden shadow-md group">
-                      <div className="absolute inset-0 bg-gradient-to-br from-gray-100 via-gray-200 to-gray-300"></div>
-                      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-primary-dark/10 opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="w-16 h-16 rounded-full bg-white/30 backdrop-blur-sm flex items-center justify-center">
-                          <svg className="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                          </svg>
+                    {/* Image or Placeholder */}
+                    {step.imageUrl ? (
+                      <div className="relative w-full max-w-md h-56 md:h-72 rounded-xl overflow-hidden shadow-md group">
+                        <img 
+                          src={step.imageUrl} 
+                          alt={step.title}
+                          className="w-full h-full object-cover transition-transform duration-200 group-hover:scale-105"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-primary-dark/10 opacity-50 group-hover:opacity-75 transition-opacity duration-200"></div>
+                      </div>
+                    ) : (
+                      <div className="relative w-full max-w-md h-56 md:h-72 rounded-xl overflow-hidden shadow-md group">
+                        <div className="absolute inset-0 bg-gradient-to-br from-gray-100 via-gray-200 to-gray-300"></div>
+                        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-primary-dark/10 opacity-50 group-hover:opacity-75 transition-opacity duration-200"></div>
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <div className="w-16 h-16 rounded-full bg-white/30 backdrop-blur-sm flex items-center justify-center">
+                            <svg className="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                          </div>
                         </div>
                       </div>
-                    </div>
+                    )}
                   </div>
                 </div>
               </div>

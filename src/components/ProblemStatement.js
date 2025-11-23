@@ -9,8 +9,8 @@ const ProblemStatement = () => {
       <div className="max-w-4xl mx-auto">
         <div
           ref={ref}
-          className={`transition-all duration-700 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          className={`transition-all duration-400 ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
           }`}
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 text-center">

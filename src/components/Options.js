@@ -48,10 +48,10 @@ const Options = () => {
           {options.map((option, index) => (
             <div
               key={index}
-              className={`border-2 ${option.borderColor} ${option.bgColor} rounded-xl p-6 md:p-8 transition-all duration-500 ${
-                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+              className={`border-2 ${option.borderColor} ${option.bgColor} rounded-xl p-6 md:p-8 transition-all duration-300 ${
+                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
               }`}
-              style={{ transitionDelay: `${index * 150}ms` }}
+              style={{ transitionDelay: `${index * 100}ms` }}
             >
               <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
                 {option.number}. {option.title}

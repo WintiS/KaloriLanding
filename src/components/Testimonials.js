@@ -31,11 +31,11 @@ const Testimonials = () => {
               key={index}
               className={`card-hover bg-white rounded-xl p-5 md:p-7 shadow-lg border border-gray-100 ${
                 testimonial.align === 'right' ? 'ml-auto' : 'mr-auto'
-              } max-w-[18rem] md:max-w-sm transition-all duration-500 ${
+              } max-w-[18rem] md:max-w-sm transition-all duration-300 ${
                 isVisible ? `opacity-100 ${testimonial.align === 'right' ? 'translate-x-0' : 'translate-x-0'}` : 
-                `opacity-0 ${testimonial.align === 'right' ? 'translate-x-8' : '-translate-x-8'}`
+                `opacity-0 ${testimonial.align === 'right' ? 'translate-x-4' : '-translate-x-4'}`
               }`}
-              style={{ transitionDelay: `${index * 150}ms` }}
+              style={{ transitionDelay: `${index * 100}ms` }}
             >
               <div className="flex items-start gap-3">
                 <div className="flex-shrink-0 w-10 h-10 rounded-full overflow-hidden border-2 border-gray-200">

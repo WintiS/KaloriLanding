@@ -46,8 +46,8 @@ const FAQ = () => {
       <div className="max-w-3xl mx-auto">
         <div
           ref={ref}
-          className={`transition-all duration-700 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          className={`transition-all duration-400 ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
           }`}
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-8 md:mb-10 text-center">
@@ -58,7 +58,7 @@ const FAQ = () => {
             {faqs.map((faq, index) => (
               <div
                 key={index}
-                className="bg-gray-50 rounded-xl border border-gray-200 overflow-hidden transition-all duration-300 hover:shadow-md"
+                className="bg-gray-50 rounded-xl border border-gray-200 overflow-hidden transition-all duration-200 hover:shadow-md"
               >
                 <button
                   onClick={() => toggleFAQ(index)}
@@ -68,7 +68,7 @@ const FAQ = () => {
                     {faq.question}
                   </span>
                   <svg
-                    className={`w-5 h-5 md:w-6 md:h-6 text-gray-600 flex-shrink-0 transition-transform duration-300 ${
+                    className={`w-5 h-5 md:w-6 md:h-6 text-gray-600 flex-shrink-0 transition-transform duration-200 ${
                       openIndex === index ? 'transform rotate-180' : ''
                     }`}
                     fill="none"
@@ -84,7 +84,7 @@ const FAQ = () => {
                   </svg>
                 </button>
                 <div
-                  className={`overflow-hidden transition-all duration-300 ${
+                  className={`overflow-hidden transition-all duration-200 ${
                     openIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                   }`}
                 >

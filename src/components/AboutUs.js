@@ -9,8 +9,8 @@ const AboutUs = () => {
       <div className="max-w-4xl mx-auto">
         <div
           ref={ref}
-          className={`bg-white rounded-2xl p-8 md:p-10 lg:p-12 shadow-xl border border-gray-200 transition-all duration-700 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          className={`bg-white rounded-2xl p-8 md:p-10 lg:p-12 shadow-xl border border-gray-200 transition-all duration-400 ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
           }`}
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-8 md:mb-10">

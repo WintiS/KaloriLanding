@@ -22,7 +22,7 @@ const Header = () => {
 
   return (
     <>
-      <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-200 ${
         scrolled ? 'bg-white/95 backdrop-blur-md shadow-md' : 'bg-white border-b border-gray-200'
       }`}>
         <div className="max-w-6xl mx-auto px-4 py-3 md:py-4">
@@ -33,13 +33,13 @@ const Header = () => {
                 alt="Kalori Logo"
                 className="w-8 h-8 md:w-10 md:h-10 rounded-full object-cover"
               />
-              <div className="text-lg md:text-xl font-bold text-gray-900 transition-colors duration-300 hover:text-primary">
+              <div className="text-lg md:text-xl font-bold text-gray-900 transition-colors duration-200 hover:text-primary">
                 Kalori
               </div>
             </div>
             <button
               onClick={handleOpenPopup}
-              className="px-4 py-2 md:px-5 md:py-2.5 bg-gradient-primary text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg text-sm md:text-base"
+              className="px-4 py-2 md:px-5 md:py-2.5 bg-gradient-primary text-white font-semibold rounded-lg transition-all duration-200 hover:scale-[1.02] hover:shadow-lg text-sm md:text-base"
             >
               Stáhnout
             </button>
@@ -49,17 +49,17 @@ const Header = () => {
 
       {showPopup && (
         <div
-          className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm transition-opacity duration-300"
+          className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm transition-opacity duration-200"
           onClick={handleClosePopup}
         >
           <div
-            className="bg-white rounded-2xl p-8 md:p-10 lg:p-12 shadow-xl border border-gray-200 max-w-2xl w-full relative transform transition-all duration-300 scale-100"
+            className="bg-white rounded-2xl p-8 md:p-10 lg:p-12 shadow-xl border border-gray-200 max-w-2xl w-full relative transform transition-all duration-200 scale-100"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close Button */}
             <button
               onClick={handleClosePopup}
-              className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors duration-200 p-2"
+              className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors duration-150 p-2"
               aria-label="Close"
             >
               <svg
@@ -85,13 +85,13 @@ const Header = () => {
               <p className="text-base md:text-lg lg:text-xl mb-8 md:mb-10 leading-relaxed text-gray-700">
                 Za pár minut už můžeš mít přehled o tom, co jíš, bez tabulek.
               </p>
-              <div className="transition-all duration-700 delay-300 flex justify-center">
+              <div className="transition-all duration-400 delay-150 flex justify-center">
                 <div className="flex flex-row gap-4 items-center">
                   <a
                     href="https://apps.apple.com/us/app/kalori-ai-kalorické-tabulky/id6746693207"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block transition-all duration-300 hover:scale-105 hover:shadow-lg rounded-lg"
+                    className="inline-block transition-all duration-200 hover:scale-[1.02] hover:shadow-lg rounded-lg"
                   >
                     <img
                       src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&releaseDate=1609459200"
@@ -103,7 +103,7 @@ const Header = () => {
                     href="https://play.google.com/store/apps/details?id=cz.wintis.kalori"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block transition-all duration-300 hover:scale-105 hover:shadow-lg rounded-lg"
+                    className="inline-block transition-all duration-200 hover:scale-[1.02] hover:shadow-lg rounded-lg"
                   >
                     <img
                       src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
