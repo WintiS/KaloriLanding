@@ -8,7 +8,6 @@ import HowItWorks from './components/HowItWorks';
 import CTA from './components/CTA';
 import BeforeAfter from './components/BeforeAfter';
 import Features from './components/Features';
-import Benefits from './components/Benefits';
 import Options from './components/Options';
 import FAQ from './components/FAQ';
 import AboutUs from './components/AboutUs';

@@ -1,5 +1,4 @@
 import React from 'react';
-import DownloadBadges from './DownloadBadges';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const CTA = ({ title, description, showBadges = true, variant = 'default' }) => {
