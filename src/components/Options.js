@@ -39,31 +39,31 @@ const Options = () => {
   const [ref, isVisible] = useScrollAnimation({ threshold: 0.1 });
 
   return (
-    <section className="px-4 py-12 md:py-16 bg-white text-center">
-      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-8 md:mb-12 text-center">
+    <section className="px-4 py-12 md:py-16 lg:py-20 bg-white text-center">
+      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-8 md:mb-16 text-center">
           Máte 3 možnosti...
         </h2>
-      <div className="max-w-4xl mx-auto">
-        <div ref={ref} className="space-y-6 md:space-y-8">
+      <div className="max-w-4xl md:max-w-7xl mx-auto">
+        <div ref={ref} className="space-y-6 md:grid md:grid-cols-3 md:gap-8 md:space-y-0">
           {options.map((option, index) => (
             <div
               key={index}
-              className={`border-2 ${option.borderColor} ${option.bgColor} rounded-xl p-6 md:p-8 transition-all duration-300 ${
+              className={`border-2 ${option.borderColor} ${option.bgColor} rounded-xl p-6 md:p-8 lg:p-10 transition-all duration-300 flex flex-col h-full ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
               }`}
               style={{ transitionDelay: `${index * 100}ms` }}
             >
-              <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
+              <h3 className="text-2xl md:text-2xl lg:text-3xl font-bold text-gray-900 mb-2">
                 {option.number}. {option.title}
               </h3>
               {option.title === "Kalori" && (
-                <h4 className="text-lg md:text-xl font-bold text-gray-900 mb-4">
+                <h4 className="text-lg md:text-lg lg:text-xl font-bold text-gray-900 mb-4">
                   (nejjednodušší cesta)
                 </h4>
               )}
-              <div className="space-y-3">
+              <div className="space-y-3 flex-grow">
                 {option.descriptions.map((description, descIndex) => (
-                  <p key={descIndex} className="text-base md:text-lg text-gray-900 leading-relaxed">
+                  <p key={descIndex} className="text-base md:text-base lg:text-lg text-gray-900 leading-relaxed">
                     {description}
                   </p>
                 ))}

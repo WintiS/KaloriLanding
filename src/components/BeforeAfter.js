@@ -24,7 +24,7 @@ const BeforeAfter = () => {
   const [ref, isVisible] = useScrollAnimation({ threshold: 0.1 });
 
   return (
-    <section className="px-4 py-12 md:py-16 bg-gradient-to-b from-gray-50 to-white">
+    <section className="px-4 py-12 md:py-16">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-8 md:mb-12 text-center">
           Před Kalori / Po Kalori
@@ -35,7 +35,7 @@ const BeforeAfter = () => {
               isVisible ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-[0.97] translate-y-2'
             }`}
           >
-            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-red-500"></span>
               Před
             </h3>
@@ -58,7 +58,7 @@ const BeforeAfter = () => {
             }`}
             style={{ transitionDelay: '100ms' }}
           >
-            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-primary"></span>
               Po
             </h3>

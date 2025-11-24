@@ -82,11 +82,14 @@ const Header = () => {
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-8 leading-tight text-gray-900">
                 Stáhni si Kalori
               </h2>
-              <p className="text-base md:text-lg lg:text-xl mb-8 md:mb-10 leading-relaxed text-gray-700">
-                Za pár minut už můžeš mít přehled o tom, co jíš, bez tabulek.
+              <p className="text-base md:text-lg lg:text-xl mb-2 md:mb-4 leading-relaxed text-gray-700">
+                Za pár minut už můžeš mít přehled o tom, co jíš, <b>bez tabulek</b>.
+              </p>
+              <p className="text-base md:text-lg lg:text-xl mb-8 md:mb-10 leading-relaxed text-gray-700 font-bold">
+                Stačí fotka.
               </p>
               <div className="transition-all duration-400 delay-150 flex justify-center">
-                <div className="flex flex-row gap-4 items-center">
+                <div className="flex flex-row gap-0 items-center">
                   <a
                     href="https://apps.apple.com/us/app/kalori-ai-kalorické-tabulky/id6746693207"
                     target="_blank"
@@ -96,7 +99,7 @@ const Header = () => {
                     <img
                       src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&releaseDate=1609459200"
                       alt="Download on the App Store"
-                      className="h-10 sm:h-[52px] w-auto rounded-lg"
+                      className="h-[47px] sm:h-[60px] w-auto rounded-lg"
                     />
                   </a>
                   <a
@@ -108,7 +111,7 @@ const Header = () => {
                     <img
                       src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
                       alt="Get it on Google Play"
-                      className="h-[55px] sm:h-[68px] w-auto rounded-lg"
+                      className="h-[60px] sm:h-[88px] w-auto rounded-lg"
                     />
                   </a>
                 </div>

@@ -30,7 +30,7 @@ const HowItWorks = () => {
   const [ref, isVisible] = useScrollAnimation({ threshold: 0.1 });
 
   return (
-    <section className="relative px-4 py-16 md:py-24 bg-gradient-to-b from-white via-gray-50/30 to-white overflow-hidden">
+    <section className="relative px-4 py-16 md:py-24 bg-gradient-to-b from-transparent to-green-50 overflow-hidden">
       {/* Decorative background elements */}
       <div className="absolute top-20 right-0 w-72 h-72 bg-primary opacity-5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-20 left-0 w-96 h-96 bg-primary-dark opacity-5 rounded-full blur-3xl"></div>
@@ -57,16 +57,6 @@ const HowItWorks = () => {
                 }`}
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
-                {/* Number Circle - Always Centered with enhanced styling */}
-                <div className="mb-8 flex justify-center">
-                  <div className="relative group">
-                    <div className="absolute inset-0 bg-gradient-primary rounded-full blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-200"></div>
-                    <div className="relative w-16 h-16 md:w-20 md:h-20 rounded-full bg-gradient-primary flex items-center justify-center shadow-xl transform transition-all duration-200 group-hover:scale-105">
-                      <span className="text-3xl md:text-4xl font-bold text-white drop-shadow-lg">{step.number}</span>
-                    </div>
-                  </div>
-                </div>
-                
                 {/* Content Card with alternating alignment */}
                 <div className={`flex flex-col ${itemsAlignment} ${textAlignment} relative`}>
                   {/* Decorative accent line */}
@@ -74,6 +64,13 @@ const HowItWorks = () => {
                   
                   {/* Content wrapper with subtle background */}
                   <div className={`relative bg-white/80 backdrop-blur-sm rounded-2xl p-6 md:p-8 lg:p-10 shadow-lg border border-gray-100/50 transition-all duration-200 hover:shadow-xl hover:border-primary/20 ${isLeft ? 'ml-0' : 'mr-0'} max-w-2xl`}>
+                    {/* Small number badge inside the box */}
+                    <div className={`absolute ${isLeft ? 'top-4 right-4' : 'top-4 left-2'} z-10`}>
+                      <div className="w-8 h-8 rounded-full bg-gradient-primary flex items-center justify-center shadow-md">
+                        <span className="text-sm font-semibold text-white">{step.number}</span>
+                      </div>
+                    </div>
+                    
                     {/* Title */}
                     <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-5 leading-tight">
                       {step.title}

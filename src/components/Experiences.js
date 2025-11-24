@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import DownloadBadges from './DownloadBadges';
 
@@ -22,10 +22,11 @@ const Experiences = () => {
   ];
 
   const [ref, isVisible] = useScrollAnimation({ threshold: 0.1 });
+  const [isFirstExpanded, setIsFirstExpanded] = useState(false);
 
   return (
     <section className="px-4 py-12 md:py-16 bg-gradient-to-b from-white to-gray-50">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         <div
           ref={ref}
           className={`transition-all duration-400 ${
@@ -39,7 +40,7 @@ const Experiences = () => {
             Podívejte se, co si o Kalori myslí ostatní lidé.
           </p>
           
-          <div className="space-y-6 md:space-y-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
@@ -50,11 +51,29 @@ const Experiences = () => {
               >
                 {/* Decorative accent line */}
                 <div className="absolute top-0 left-0 w-1 h-full bg-gradient-primary"></div>
-                
+
                 <div className="pl-4">
-                  <p className="text-gray-800 text-base md:text-lg leading-relaxed mb-5">
-                    {testimonial.text}
-                  </p>
+                  <div className="relative">
+                    <p
+                      className={`text-gray-800 text-base md:text-lg leading-relaxed mb-5 ${
+                        index === 0 && !isFirstExpanded ? 'md:max-h-48 md:overflow-hidden' : ''
+                      }`}
+                    >
+                      {testimonial.text}
+                    </p>
+                    {index === 0 && !isFirstExpanded && (
+                      <div className="hidden md:block absolute inset-x-0 bottom-0 h-16 pointer-events-none bg-gradient-to-t from-white via-white/80 to-transparent" />
+                    )}
+                  </div>
+                  {index === 0 && (
+                    <button
+                      type="button"
+                      className="hidden md:inline-flex items-center text-sm font-semibold text-indigo-600 hover:text-indigo-800 mb-3"
+                      onClick={() => setIsFirstExpanded((prev) => !prev)}
+                    >
+                      {isFirstExpanded ? 'Zobrazit méně' : 'Zobrazit více'}
+                    </button>
+                  )}
                   <div className="flex items-center gap-2 pt-4 border-t border-gray-100">
                     <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-gray-200 shadow-md flex items-center justify-center bg-gradient-primary">
                       {testimonial.picture ? (

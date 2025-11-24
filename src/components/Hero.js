@@ -24,8 +24,8 @@ const Hero = () => {
           ref={ref}
           className={`transition-all duration-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
         >
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-            Jedna fotka, <span className="gradient-text">10 vteřin.</span> Přehled o jídle celý den.
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+            Jedna&nbsp;fotka, <span className="gradient-text">10&nbsp;vteřin.</span> Přehled o jídle po celý den.
           </h1>
           <p className="text-base md:text-lg text-gray-700 mb-8 max-w-2xl mx-auto leading-relaxed">
           Jedna fotka stačí. Kalori spočítá vše za vás. Bez zdlouhavého zapisování, bez vážení, bez stresu.
@@ -55,7 +55,7 @@ const Hero = () => {
            
             {/* Text */}
             <p className="text-sm md:text-base font-base text-gray-900">
-              25+ spokojených klientů
+              125+ spokojených uživatelů
             </p>
           </div>
           
@@ -64,12 +64,12 @@ const Hero = () => {
             {userImages.map((imageUrl, index) => (
               <div
                 key={index}
-                className={`w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden border-2 border-white shadow-md ${
-                  index > 0 ? '-ml-3' : ''
+                className={`w-10 h-10 md:w-14 md:h-14 rounded-full overflow-hidden border-2 border-white shadow-md ${
+                  index > 0 ? '-ml-6' : ''
                 } ${index === userImages.length - 1 ? 'flex items-center justify-center bg-gray-200' : ''}`}
               >
                 {index === userImages.length - 1 ? (
-                  <span className="text-xs md:text-sm font-bold text-gray-500">+21</span>
+                  <span className="text-xs md:text-sm font-bold text-gray-500">+121</span>
                 ) : (
                   <img 
                     src={imageUrl || undefined} 

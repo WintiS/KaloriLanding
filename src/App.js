@@ -18,36 +18,49 @@ function App() {
     <div className="App min-h-screen bg-white">
       <Header />
       <div className="pt-16 md:pt-20">
-        <Hero />
+        <div id="hero">
+          <Hero />
+        </div>
       <Testimonials />
       <ProblemStatement />
       <Experiences />
-      <HowItWorks />
+      <div id="how-it-works">
+        <HowItWorks />
+      </div>
       <CTA 
         title="Chcete přes svátky jíst normálně, ale nepřibrat?"
         description="Pak si stáhněte Kalori zdarma a začněte ještě dnes!"
-      
+        highlightWords={["nepřibrat", "zdarma", "dnes!"]}
       />
       <BeforeAfter />
-      <Features />
+      <div id="features">
+        <Features />
+      </div>
       <CTA 
         title="Toto všechno a ještě více, vás čeká uvnitř!"
         description=""
         variant="no-box"
       />
       <CTA 
-        title="Vyzkoušejte Kalori na 7 dní zdarma"
+        title="Vyzkoušejte Kalori na 7&nbsp;dní&nbsp;zdarma"
         description="Pokud se vám nebude líbit, neplatíte nic, ale my věříme, že si Kalori zamilujete :)"
         variant="default"
+        highlightWords={["zdarma", "neplatíte nic", "zamilujete"]}
       />
-      <Options />
-      <FAQ />
+      <div id="options">
+        <Options />
+      </div>
+      <div id="faq">
+        <FAQ />
+      </div>
       <CTA 
-        title="Stáhněte Kalori a získejte Vánoční slevu 20%"
-        description="Ušetřete čas a mějte přehled o jídle už dnes! Vánoční sleva platí jen do 20.12."
+        title="Stáhněte Kalori a&nbsp;získejte Vánoční slevu 20%"
+        description="Ušetřete čas a mějte přehled o&nbsp;jídle už dnes! Vánoční sleva platí jen do 31.12."
         variant="christmas"
       />
-      <AboutUs />
+      <div id="about-us">
+        <AboutUs />
+      </div>
      
       <CTA 
         title="Jste připraveni?"

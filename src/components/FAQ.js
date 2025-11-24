@@ -42,7 +42,7 @@ const FAQ = () => {
   };
 
   return (
-    <section className="px-4 py-12 md:py-16 bg-white">
+    <section className="px-4 py-12 md:py-16 bg-gradient-to-b from-transparent to-green-50">
       <div className="max-w-3xl mx-auto">
         <div
           ref={ref}
