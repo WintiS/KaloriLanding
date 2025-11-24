@@ -49,7 +49,7 @@ const CTA = ({ title, description, showBadges = true, variant = 'default', highl
   const hasBox = variant === 'default' || isChristmas;
   const boxClasses = hasBox 
     ? isChristmas
-      ? 'bg-gradient-to-br from-red-50 via-white to-green-50 rounded-2xl p-8 md:p-10 lg:p-12 shadow-2xl border-2 border-red-200 relative overflow-hidden'
+      ? 'bg-gradient-to-br from-red-50 via-white to-red-50 rounded-2xl p-8 md:p-10 lg:p-12 shadow-2xl border-2 border-red-200 relative overflow-hidden'
       : 'bg-gradient-to-br from-white via-gray-50 to-white rounded-2xl p-8 md:p-10 lg:p-12 shadow-2xl relative overflow-hidden'
     : 'p-0';
 
