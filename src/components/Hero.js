@@ -25,7 +25,7 @@ const Hero = () => {
           className={`transition-all duration-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
         >
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-            Jedna&nbsp;fotka, <span className="gradient-text">10&nbsp;vteřin.</span> Přehled o jídle po celý den.
+            Jedna&nbsp;fotka, <span className="gradient-text">10&nbsp;vteřin.</span> <br/> Přehled o&nbsp;jídle po celý den.
           </h1>
           <p className="text-base md:text-lg text-gray-700 mb-8 max-w-2xl mx-auto leading-relaxed">
           Jedna fotka stačí. Kalori spočítá vše za vás. Bez zdlouhavého zapisování, bez vážení, bez stresu.

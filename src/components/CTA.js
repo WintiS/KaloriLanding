@@ -28,7 +28,7 @@ const CTA = ({ title, description, showBadges = true, variant = 'default', highl
         if (isTitle) {
           // For title: underline with green
           return (
-            <span key={index} className="underline decoration-primary decoration-2 underline-offset-4">
+            <span key={index} className="text-primary font-extrabold">
               {part}
             </span>
           );
@@ -193,7 +193,7 @@ const CTA = ({ title, description, showBadges = true, variant = 'default', highl
                     <img
                       src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&releaseDate=1609459200"
                       alt="Download on the App Store"
-                      className="h-[47px] sm:h-[52px] w-auto rounded-lg"
+                      className="h-[43px] sm:h-[48px] w-auto rounded-lg"
                     />
                   </a>
                   <a
@@ -205,7 +205,7 @@ const CTA = ({ title, description, showBadges = true, variant = 'default', highl
                     <img
                       src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
                       alt="Get it on Google Play"
-                      className="h-[60px] sm:h-[68px] w-auto rounded-lg"
+                      className="h-[62px] sm:h-[70px] w-auto rounded-lg"
                     />
                   </a>
                 </div>

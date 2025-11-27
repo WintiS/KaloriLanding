@@ -12,7 +12,7 @@ const DownloadBadges = () => {
         <img
           src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&releaseDate=1609459200"
           alt="Download on the App Store"
-          className="h-[50px] sm:h-[60px] w-auto rounded-lg"
+          className="h-[48px] sm:h-[60px] w-auto rounded-lg"
         />
       </a>
       <a

@@ -1,8 +1,18 @@
 import React, { useState, useEffect } from 'react';
 
+const navLinks = [
+  { label: 'Domů', href: '#hero' },
+  { label: 'Jak to funguje', href: '#how-it-works' },
+  { label: 'Funkce', href: '#features' },
+  { label: 'Možnosti', href: '#options' },
+  { label: 'FAQ', href: '#faq' },
+  { label: 'O nás', href: '#about-us' }
+];
+
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,10 +24,19 @@ const Header = () => {
 
   const handleOpenPopup = () => {
     setShowPopup(true);
+    setIsMenuOpen(false);
   };
 
   const handleClosePopup = () => {
     setShowPopup(false);
+  };
+
+  const toggleMenu = () => {
+    setIsMenuOpen((prev) => !prev);
+  };
+
+  const handleLinkClick = () => {
+    setIsMenuOpen(false);
   };
 
   return (
@@ -26,8 +45,8 @@ const Header = () => {
         scrolled ? 'bg-white/95 backdrop-blur-md shadow-md' : 'bg-white border-b border-gray-200'
       }`}>
         <div className="max-w-6xl mx-auto px-4 py-3 md:py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2 md:gap-3">
+          <div className="flex items-center gap-4 w-full">
+            <a href="#hero" className="flex items-center gap-2 md:gap-3">
               <img
                 src="/android-chrome-192x192.png"
                 alt="Kalori Logo"
@@ -36,15 +55,71 @@ const Header = () => {
               <div className="text-lg md:text-xl font-bold text-gray-900 transition-colors duration-200 hover:text-primary">
                 Kalori
               </div>
+            </a>
+            <div className="flex items-center gap-3 ml-auto">
+              <nav className="hidden md:flex items-center gap-6 text-sm lg:text-base text-gray-700 font-medium">
+                {navLinks.map(({ label, href }) => (
+                  <a
+                    key={href}
+                    href={href}
+                    className="transition-colors duration-200 hover:text-primary"
+                  >
+                    {label}
+                  </a>
+                ))}
+              </nav>
+              <button
+                onClick={handleOpenPopup}
+                className="px-4 py-2 md:px-5 md:py-2.5 bg-gradient-primary text-white font-semibold rounded-lg transition-all duration-200 hover:scale-[1.02] hover:shadow-lg text-sm md:text-base"
+              >
+                Stáhnout
+              </button>
+              <button
+                onClick={toggleMenu}
+                className="inline-flex md:hidden items-center justify-center p-2 rounded-lg border border-gray-200 text-gray-700 transition-all duration-200 hover:bg-gray-50"
+                aria-label="Toggle navigation menu"
+                aria-expanded={isMenuOpen}
+              >
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  {isMenuOpen ? (
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  ) : (
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7h16M4 12h16M4 17h16" />
+                  )}
+                </svg>
+              </button>
             </div>
-            <button
-              onClick={handleOpenPopup}
-              className="px-4 py-2 md:px-5 md:py-2.5 bg-gradient-primary text-white font-semibold rounded-lg transition-all duration-200 hover:scale-[1.02] hover:shadow-lg text-sm md:text-base"
-            >
-              Stáhnout
-            </button>
           </div>
         </div>
+        {isMenuOpen && (
+          <div className="md:hidden border-t border-gray-100 bg-white">
+            <div className="max-w-6xl mx-auto px-4 pb-4">
+              <nav className="flex flex-col gap-4 py-4 text-base font-medium text-gray-900">
+                {navLinks.map(({ label, href }) => (
+                  <a
+                    key={href}
+                    href={href}
+                    onClick={handleLinkClick}
+                    className="py-2 rounded-lg px-2 transition-colors duration-200 hover:bg-gray-50"
+                  >
+                    {label}
+                  </a>
+                ))}
+              </nav>
+              <button
+                onClick={handleOpenPopup}
+                className="w-full px-4 py-3 bg-gradient-primary text-white font-semibold rounded-xl transition-all duration-200 hover:scale-[1.01] hover:shadow-lg"
+              >
+                Stáhnout aplikaci
+              </button>
+            </div>
+          </div>
+        )}
       </header>
 
       {showPopup && (

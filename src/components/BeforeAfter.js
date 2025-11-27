@@ -35,19 +35,19 @@ const BeforeAfter = () => {
               isVisible ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-[0.97] translate-y-2'
             }`}
           >
-            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 flex items-center justify-center gap-2 text-center">
               <span className="w-2 h-2 rounded-full bg-red-500"></span>
               Před
             </h3>
-            <ul className="space-y-3 md:space-y-3.5">
+            <ul className="space-y-3 md:space-y-3.5 text-center">
               {beforeItems.map((item, index) => (
                 <li
                   key={index}
-                  className="flex items-start gap-3 transition-all duration-200 hover:translate-x-0.5"
+                  className="flex items-center justify-center gap-3 transition-all duration-200 hover:translate-x-0.5"
                   style={{ transitionDelay: `${index * 30}ms` }}
                 >
                   <span className="text-red-500 text-xl md:text-2xl flex-shrink-0 font-bold">×</span>
-                  <span className="text-base md:text-lg text-gray-700 leading-relaxed">{item}</span>
+                  <span className="text-base md:text-lg text-gray-700 leading-relaxed text-center">{item}</span>
                 </li>
               ))}
             </ul>
@@ -58,19 +58,19 @@ const BeforeAfter = () => {
             }`}
             style={{ transitionDelay: '100ms' }}
           >
-            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 flex items-center justify-center gap-2 text-center">
               <span className="w-2 h-2 rounded-full bg-primary"></span>
               Po
             </h3>
-            <ul className="space-y-3 md:space-y-3.5">
+            <ul className="space-y-3 md:space-y-3.5 text-center">
               {afterItems.map((item, index) => (
                 <li
                   key={index}
-                  className="flex items-start gap-3 transition-all duration-200 hover:translate-x-0.5"
+                  className="flex items-center justify-center gap-3 transition-all duration-200 hover:translate-x-0.5"
                   style={{ transitionDelay: `${index * 30}ms` }}
                 >
                   <span className="text-primary text-xl md:text-2xl flex-shrink-0 font-bold">✓</span>
-                  <span className="text-base md:text-lg text-gray-700 leading-relaxed">{item}</span>
+                  <span className="text-base md:text-lg text-gray-700 leading-relaxed text-center">{item}</span>
                 </li>
               ))}
             </ul>

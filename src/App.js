@@ -29,7 +29,7 @@ function App() {
       </div>
       <CTA 
         title="Chcete přes svátky jíst normálně, ale nepřibrat?"
-        description="Pak si stáhněte Kalori zdarma a začněte ještě dnes!"
+        description="Pak si stáhněte Kalori zdarma a&nbsp;začněte ještě dnes!"
         highlightWords={["nepřibrat", "zdarma", "dnes!"]}
       />
       <BeforeAfter />
@@ -37,7 +37,7 @@ function App() {
         <Features />
       </div>
       <CTA 
-        title="Toto všechno a ještě více, vás čeká uvnitř!"
+        title="Toto všechno a&nbsp;ještě více, vás čeká uvnitř!"
         description=""
         variant="no-box"
       />
@@ -55,8 +55,9 @@ function App() {
       </div>
       <CTA 
         title="Stáhněte Kalori a&nbsp;získejte Vánoční slevu 20%"
-        description="Ušetřete čas a mějte přehled o&nbsp;jídle už dnes! Vánoční sleva platí jen do 31.12."
+        description="Ušetřete čas a&nbsp;mějte přehled o&nbsp;jídle už dnes! Vánoční sleva platí jen do 31.12."
         variant="christmas"
+        highlightWords={["dnes!", "31.12.", "sleva"]}
       />
       <div id="about-us">
         <AboutUs />
@@ -66,6 +67,7 @@ function App() {
         title="Jste připraveni?"
         description="Vyzkoušejte Kalori zdarma ještě dnes! Pokud se vám nebude líbit, nic neplatíte :)"
         variant="default"
+        highlightWords={["zdarma", "nic neplatíte"]}
       />
       </div>
       <Footer />

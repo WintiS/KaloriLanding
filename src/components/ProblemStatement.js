@@ -17,13 +17,13 @@ const ProblemStatement = () => {
             {/* Left column - 60% width on md+ */}
             <div className="w-full md:w-[60%]">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 text-center md:text-left">
-                Vidíte se v této situaci?
+                Vidíte se v&nbsp;této situaci?
               </h2>
               <p className="text-base md:text-lg text-gray-600 leading-relaxed text-left">
-                Chcete být fit, cítit se dobře v oblečení a mít jistotu, že jíte „tak akorát"? Ale zároveň nemáte čas několik hodin denně řešit, co přesně sníte? Kalorické tabulky jsou fajn… jenže zaberou desítky minut každý den. Vážit každé jídlo, abyste vše správně zapsali? Ještě horší. 
+                Chcete být fit, cítit&nbsp;se dobře v oblečení a mít jistotu, že&nbsp;jíte „tak&nbsp;akorát"? Ale zároveň nemáte čas několik hodin denně řešit, co&nbsp;přesně sníte? Kalorické tabulky jsou fajn… jenže zaberou desítky minut každý den. Vážit každé jídlo, abyste vše správně zapsali? Ještě&nbsp;horší. 
               </p>
               <p className="text-base md:text-lg text-gray-600 leading-relaxed mt-4 text-left">
-                A tak často skončíme tak, že jíme od oka a doufáme, že to nepřeháníme. A právě tady přichází Kalori. Během 2 minut máte zapsané celé jídlo na den. Stačí jídlo vyfotit nebo krátce popsat a appka udělá zbytek za vás. Jednoduché, rychlé a přehledné.
+                A&nbsp;tak často skončíme tak, že&nbsp;jíme od oka a&nbsp;doufáme, že to nepřeháníme. A&nbsp;právě tady přichází Kalori. Během 2 minut máte zapsané celé jídlo na den. Stačí jídlo vyfotit nebo&nbsp;krátce popsat a&nbsp;appka udělá zbytek za vás. Jednoduché, rychlé a&nbsp;přehledné.
               </p>
             </div>
             {/* Right column - 40% width on md+ */}

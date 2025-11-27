@@ -65,7 +65,7 @@ const HowItWorks = () => {
                   {/* Content wrapper with subtle background */}
                   <div className={`relative bg-white/80 backdrop-blur-sm rounded-2xl p-6 md:p-8 lg:p-10 shadow-lg border border-gray-100/50 transition-all duration-200 hover:shadow-xl hover:border-primary/20 ${isLeft ? 'ml-0' : 'mr-0'} max-w-2xl`}>
                     {/* Small number badge inside the box */}
-                    <div className={`absolute ${isLeft ? 'top-4 right-4' : 'top-4 left-2'} z-10`}>
+                    <div className="flex justify-center mb-6">
                       <div className="w-8 h-8 rounded-full bg-gradient-primary flex items-center justify-center shadow-md">
                         <span className="text-sm font-semibold text-white">{step.number}</span>
                       </div>
