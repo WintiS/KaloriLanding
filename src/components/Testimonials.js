@@ -34,26 +34,21 @@ const Testimonials = () => {
               }`}
               style={{ transitionDelay: `${index * 100}ms` }}
             >
-              {/* Glowing ring effect - always visible, stronger on hover */}
-              <div className="absolute -inset-1 bg-gradient-to-r from-primary-light via-primary to-primary-dark rounded-xl opacity-30 blur-sm group-hover:opacity-70 group-hover:blur-md transition-all duration-300 -z-10"></div>
-              
-              {/* Additional glow layer for more intensity on hover */}
-              <div className="absolute -inset-0.5 bg-primary rounded-xl opacity-0 group-hover:opacity-40 group-hover:blur-lg transition-all duration-300 -z-10"></div>
-              
-              {/* Main green ring border with glow shadow */}
-              <div 
-                className="relative bg-white rounded-xl p-5 md:p-7 ring-2 ring-primary group-hover:ring-4 group-hover:ring-primary-dark transition-all duration-300 shadow-sm group-hover:shadow-lg group-hover:-translate-y-1 z-0"
-                style={{
-                  boxShadow: '0 0 15px rgba(107, 224, 140, 0.2), 0 0 0 2px rgba(107, 224, 140, 0.1)',
-                }}
-              >
-                <div 
-                  className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
-                  style={{
-                    boxShadow: '0 0 25px rgba(107, 224, 140, 0.5), 0 0 50px rgba(107, 224, 140, 0.3)',
-                  }}
-                ></div>
-                <p className="relative text-gray-700 text-md md:text-lg font-bold group-hover:text-gray-900 transition-colors duration-300 z-10">{testimonial.text}</p>
+              {/* Animated gradient halo */}
+              <div className="absolute -inset-2 rounded-2xl bg-gradient-to-r from-primary-light via-primary to-primary-dark opacity-30 blur-md group-hover:opacity-80 group-hover:blur-xl transition-all duration-500 -z-10"></div>
+
+              <div className="relative p-[2px] rounded-2xl bg-gradient-to-r from-primary-light via-primary to-primary-dark shadow-[0_10px_25px_rgba(45,200,120,0.25)] group-hover:shadow-[0_15px_35px_rgba(45,200,120,0.35)] transition-all duration-500 group-hover:-translate-y-1">
+                <div className="absolute inset-0 rounded-2xl ring-1 ring-white/40 opacity-60 mix-blend-screen pointer-events-none"></div>
+
+                <div className="relative bg-white rounded-[1.1rem] p-5 md:p-7 ring-1 ring-white/30">
+                  <div 
+                    className="absolute inset-0 rounded-[1.1rem] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+                    style={{
+                      boxShadow: '0 0 30px rgba(107, 224, 140, 0.35), 0 0 60px rgba(107, 224, 140, 0.25)',
+                    }}
+                  ></div>
+                  <p className="relative text-gray-700 text-md md:text-lg font-bold group-hover:text-gray-900 transition-colors duration-300 z-10">{testimonial.text}</p>
+                </div>
               </div>
             </div>
           ))}

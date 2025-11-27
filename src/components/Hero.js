@@ -35,9 +35,20 @@ const Hero = () => {
         <div
           className={`mb-8 transition-all duration-400 delay-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
         >
-          <div className="w-full h-48 sm:h-64 md:h-80 bg-white rounded-xl shadow-2xl overflow-hidden relative">
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary-dark/20"></div>
-            <div className="w-full h-full bg-gray-200"></div>
+          <div className="w-full h-56 sm:h-[30rem] md:h-[30rem] bg-white rounded-xl shadow-2xl overflow-hidden relative">
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary-dark/20 pointer-events-none z-0"></div>
+            <video
+              src="/assets/heroGray.mp4"
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="relative z-10 w-full h-full object-cover"
+              controls={false}
+            >
+              {/* Provide a short fallback so screen readers know what's happening */}
+              Your browser does not support the video tag.
+            </video>
           </div>
         </div>
         
