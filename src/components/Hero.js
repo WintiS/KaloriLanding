@@ -38,7 +38,7 @@ const Hero = () => {
           <div className="w-full h-56 sm:h-[30rem] md:h-[30rem] bg-white rounded-xl shadow-2xl overflow-hidden relative">
             <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary-dark/20 pointer-events-none z-0"></div>
             <video
-              src="/assets/heroGray.mp4"
+              src="/assets/heroVideo.mp4"
               autoPlay
               muted
               loop

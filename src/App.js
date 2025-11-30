@@ -60,7 +60,7 @@ function App() {
         highlightWords={["dnes!", "31.12.", "sleva"]}
       />
       <div id="about-us">
-        <AboutUs />
+        <AboutUs imageUrl="/assets/vitek.jpeg" />
       </div>
      
       <CTA 

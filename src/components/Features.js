@@ -6,7 +6,8 @@ const Features = () => {
     {
       number: 1,
       title: "Víte, co jíte a jste fit",
-      description: "Konečně žádné odhadování kalorií, sacharidů ani tuků. Jen kontrola bez námahy. Už bude mnohem jednodušší dosáhnout tvého vysněného těla."
+      description: "Konečně žádné odhadování kalorií, sacharidů ani tuků. Jen kontrola bez námahy. Už bude mnohem jednodušší dosáhnout tvého vysněného těla.",
+      imageUrl: "/assets/stayFit.jpg"
     },
     {
       number: 2,
@@ -17,22 +18,26 @@ const Features = () => {
     {
       number: 3,
       title: "Už žádné vážení jídla",
-      description: "Konec stresu. Jedna fotka nahradí celou tabulku, takže už žádné hodiny vážení."
+      description: "Konec stresu. Jedna fotka nahradí celou tabulku, takže už žádné hodiny vážení.",
+      imageUrl: "/assets/noWeight.jpg"
     },
     {
       number: 4,
       title: "Svátky přežijete bez přibírání",
-      description: "Budete moct jíst cokoliv budete chtít a nestresovat se nad tím, že každou chvíli přiberete."
+      description: "Budete moct jíst cokoliv budete chtít a nestresovat se nad tím, že každou chvíli přiberete.",
+      imageUrl: "/assets/vanoceBezPribirani.jpg"
     },
     {
       number: 5,
       title: "Vyfotíte jídlo, hned vidíte kalorie",
-      description: "Jeden klik, bez psaní, bez tabulek. Stačí jen jedna fotka a máte na den vystaráno."
+      description: "Jeden klik, bez psaní, bez tabulek. Stačí jen jedna fotka a máte na den vystaráno.",
+      imageUrl: "/assets/mockupPizza.png"
     },
     {
       number: 6,
-      title: "Přehled dne za 2 minuty",
-      description: "Ušetříte čas. Máte jasno i v největším shonu a nemusíte zdlouhavě psát a vážit jednotlivé suroviny do tabulky."
+      title: "Každý den nové doporučené recepty",
+      description: "Nevíte zrovna co si dát? Kalori vám každý den doporučí jídlo, které sedí do vašich cílů.",
+      imageUrl: "/assets/doporucene.png"
     }
   ];
 

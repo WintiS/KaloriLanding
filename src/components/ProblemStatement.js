@@ -30,7 +30,7 @@ const ProblemStatement = () => {
             <div className="w-full md:w-[40%] flex items-center justify-center">
               <div className="relative w-full h-[220px] sm:h-[280px] md:h-full max-h-[380px] rounded-xl overflow-hidden shadow-xl border border-gray-200 bg-white group">
                 <img 
-                  src="/assets/screenshot1.png"
+                  src="/assets/beforeAfter.png"
                   alt="Náhled aplikace Kalori"
                   className="w-full h-full object-cover transition-transform duration-200 group-hover:scale-105"
                   style={{ minHeight: '220px' }}

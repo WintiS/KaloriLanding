@@ -1,7 +1,7 @@
 import React from 'react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
-const AboutUs = () => {
+const AboutUs = ({ imageUrl }) => {
   const [ref, isVisible] = useScrollAnimation({ threshold: 0.2 });
 
   return (
@@ -29,11 +29,18 @@ const AboutUs = () => {
             </div>
             
             <div className="mt-8 md:mt-10 lg:mt-0 w-full lg:w-80 lg:flex-shrink-0">
-              <div className="w-full aspect-square max-w-md mx-auto lg:max-w-full lg:mx-0 bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl shadow-lg overflow-hidden relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-primary-dark/10"></div>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-gray-400 font-bold text-xl md:text-2xl">foto</span>
-                </div>
+              <div className="w-full aspect-square max-w-md mx-auto lg:max-w-full lg:mx-0 rounded-xl shadow-lg overflow-hidden relative">
+                {imageUrl ? (
+                  <img 
+                    src={imageUrl} 
+                    alt="O nás" 
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <div className="w-full h-full bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
+                    <span className="text-gray-400 font-bold text-xl md:text-2xl">foto</span>
+                  </div>
+                )}
               </div>
             </div>
           </div>

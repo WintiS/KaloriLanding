@@ -7,17 +7,20 @@ const HowItWorks = () => {
       number: 1,
       title: "Stáhnete aplikaci a přihlásíte se",
       description: "Jednoduše si stáhnete Kalori, vyplníte pár údajů o sobě (ať vám appka může doporučit správné cíle) a jste uvnitř. Žádná věda, jen pár vteřin a máte hotovo.",
+      imageUrl: "/assets/downloadApp.png"
       
     },
     {
       number: 2,
       title: "Zapište své první jídlo",
-      description: "Po přihlášení uvidíte svůj denní přehled. V pravém dolním rohu najdete \"plus\" tlačítko. Na tlačítko klikněte a můžete přidat jídlo. Vše je jasné a přehledné, žádné zmatky."
+      description: "Po přihlášení uvidíte svůj denní přehled. V pravém dolním rohu najdete \"plus\" tlačítko. Na tlačítko klikněte a můžete přidat jídlo. Vše je jasné a přehledné, žádné zmatky.",
+      imageUrl: "/assets/logFirstMeal.png"
     },
     {
       number: 3,
       title: "Vyberte možnost zápisu",
-      description: "Zobrazí se vám tři možnosti, jak jídlo přidat: vyfotit jídlo (nejrychlejší možnost), vybrat jídlo z galerie nebo krátce popsat, co jste měli. Doporučujeme možnost \"Kamera\". Je to nejrychlejší způsob, jak mít celý den hotový už za pár minut."
+      description: "Zobrazí se vám tři možnosti, jak jídlo přidat: vyfotit jídlo (nejrychlejší možnost), vybrat jídlo z galerie nebo krátce popsat, co jste měli. Doporučujeme možnost \"Kamera\". Je to nejrychlejší způsob, jak mít celý den hotový už za pár minut.",
+      imageUrl: "/assets/chooseLog.png"
     },
     {
       number: 4,
