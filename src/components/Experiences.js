@@ -17,7 +17,7 @@ const Experiences = () => {
     {
       text: "Moc se mi líbí, že stačí jen fotka a hned je přehled o jídle..., to musí být obrovské ulehčení pro každodenní sledování stravy.",
       author: "Martina",
-      picture: "/assets/woman3.jpg" // Add your image URL here
+      picture: "/assets/female4.jpg" // Add your image URL here
     }
   ];
 

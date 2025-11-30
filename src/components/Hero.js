@@ -7,9 +7,9 @@ const Hero = () => {
 
   const userImages = [
     "/assets/female5.jpg", // Add your image URL here
-    "/assets/generated3.png", // Add your image URL here
-    "/assets/female6.jpg", // Add your image URL here
+    "/assets/female4.jpg", // Add your image URL here
     "/assets/generated5.png", // Add your image URL here
+    "/assets/woman3.jpg", // Add your image URL here
     "/assets/generated3.png"  // Add your image URL here (last one with +21 overlay)
   ];
 
