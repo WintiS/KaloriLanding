@@ -4,11 +4,7 @@ import DownloadBadges from './DownloadBadges';
 
 const Experiences = () => {
   const testimonials = [
-    {
-      text: "za mě je aplikace hezká občas se mi stalo že mi to celkově myslím tím bílkoviny sacharidy dle fotky vyfocené spočetlo ne úplně přesně nicméně to považuji za úspěch protože co si budem z fotky vypočítat přibližnou výživovou hodnotu je pecka 👌 A potom na co jsem narazila tak bylo to že když jsem si uložila dané jídlo tak mi to nešlo nebo jsem na to nepřišla jak se to dělá něco tam doplnit, takže jsem to musela vymazat a napsat znovu. Každopádně se domnívám že za tu cenu roční co si aplikaci může člověk zakoupit je to velmi užitečné 👏",
-      author: "Monika",
-      picture: "/assets/woman1.jpg" // Add your image URL here
-    },
+    
     {
       text: "Ahojky, tak jsou zkoušela tu vaší apku a musím říct, že super. I kdyz jsem zastánce klasického vážení a počítání, třeba na dovolený nebo u jídla v restauraci je to fakt skvělý.",
       author: "Klárka",
@@ -18,6 +14,11 @@ const Experiences = () => {
       text: "Moc se mi líbí, že stačí jen fotka a hned je přehled o jídle..., to musí být obrovské ulehčení pro každodenní sledování stravy.",
       author: "Martina",
       picture: "/assets/female4.jpg" // Add your image URL here
+    },
+    {
+      text: "za mě je aplikace hezká občas se mi stalo že mi to celkově myslím tím bílkoviny sacharidy dle fotky vyfocené spočetlo ne úplně přesně nicméně to považuji za úspěch protože co si budem z fotky vypočítat přibližnou výživovou hodnotu je pecka 👌 A potom na co jsem narazila tak bylo to že když jsem si uložila dané jídlo tak mi to nešlo nebo jsem na to nepřišla jak se to dělá něco tam doplnit, takže jsem to musela vymazat a napsat znovu. Každopádně se domnívám že za tu cenu roční co si aplikaci může člověk zakoupit je to velmi užitečné 👏",
+      author: "Monika",
+      picture: "/assets/woman1.jpg" // Add your image URL here
     }
   ];
 
