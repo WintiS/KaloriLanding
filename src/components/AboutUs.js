@@ -20,7 +20,7 @@ const AboutUs = ({ imageUrl }) => {
           <div className="flex flex-col lg:flex-row lg:items-center lg:gap-12">
             <div className="flex-1 space-y-6 md:space-y-8">
               <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                Viděli jsme, že lidé Neselhávají proto, že by byli slabí. Selhávají proto, že nástroje, které mají, jsou příliš těžké na používání. Dnešní svět je hrozně rychlý. Jíme venku, u známých, v práci, mezi schůzkami... Kdo má vůbec čas zapisovat všechno ručně?
+                Viděli jsme, že lidé neselhávají proto, že by byli slabí. Selhávají proto, že nástroje, které mají, jsou příliš těžké na používání. Dnešní svět je hrozně rychlý. Jíme venku, u známých, v práci, mezi schůzkami... Kdo má vůbec čas zapisovat všechno ručně?
               </p>
               
               <p className="text-base md:text-lg text-gray-700 leading-relaxed">
