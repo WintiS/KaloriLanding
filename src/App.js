@@ -53,15 +53,8 @@ function App() {
       <div id="faq">
         <FAQ />
       </div>
-      <CTA 
-        title="Stáhněte Kalori a&nbsp;získejte Vánoční slevu 20%"
-        description="Ušetřete čas a&nbsp;mějte přehled o&nbsp;jídle už dnes! Vánoční sleva platí jen do 31.12."
-        variant="christmas"
-        highlightWords={["dnes!", "31.12.", "sleva"]}
-      />
-      <div id="about-us">
-        <AboutUs imageUrl="/assets/vitek.jpeg" />
-      </div>
+     
+      
      
       <CTA 
         title="Jste připraveni?"

@@ -72,14 +72,6 @@ const Footer = () => {
                   Často kladené otázky
                 </button>
               </li>
-              <li>
-                <button
-                  onClick={() => scrollToSection('about-us')}
-                  className="text-sm text-gray-600 hover:text-primary transition-colors duration-200 text-left"
-                >
-                  O nás
-                </button>
-              </li>
             </ul>
           </div>
 

@@ -5,8 +5,7 @@ const navLinks = [
   { label: 'Jak to funguje', href: '#how-it-works' },
   { label: 'Funkce', href: '#features' },
   { label: 'Možnosti', href: '#options' },
-  { label: 'FAQ', href: '#faq' },
-  { label: 'O nás', href: '#about-us' }
+  { label: 'FAQ', href: '#faq' }
 ];
 
 const Header = () => {
