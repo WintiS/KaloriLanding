@@ -1,4 +1,6 @@
 import React from 'react';
+import { logEvent } from 'firebase/analytics';
+import { analyticsPromise } from '../firebase';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const CTA = ({ title, description, showBadges = true, variant = 'default', highlightWords = [] }) => {
@@ -44,6 +46,12 @@ const CTA = ({ title, description, showBadges = true, variant = 'default', highl
       return part;
     });
   };
+
+  const trackClick = (label) =>
+    analyticsPromise.then((analytics) => {
+      if (!analytics) return;
+      logEvent(analytics, 'cta_click', { label });
+    });
 
   const isChristmas = variant === 'christmas';
   const hasBox = variant === 'default' || isChristmas;
@@ -94,7 +102,8 @@ const CTA = ({ title, description, showBadges = true, variant = 'default', highl
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-block transition-all duration-200 hover:scale-[1.02] hover:shadow-lg rounded-lg"
-                    >
+                    onClick={() => trackClick('cta_app_store_badge')}
+                  >
                       <img
                         src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&releaseDate=1609459200"
                         alt="Download on the App Store"
@@ -106,7 +115,8 @@ const CTA = ({ title, description, showBadges = true, variant = 'default', highl
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-block transition-all duration-200 hover:scale-[1.02] hover:shadow-lg rounded-lg"
-                    >
+                    onClick={() => trackClick('cta_google_play_badge')}
+                  >
                       <img
                         src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
                         alt="Get it on Google Play"

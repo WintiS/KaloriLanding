@@ -1,6 +1,14 @@
 import React from 'react';
+import { logEvent } from 'firebase/analytics';
+import { analyticsPromise } from '../firebase';
 
 const DownloadBadges = () => {
+  const trackClick = (label) =>
+    analyticsPromise.then((analytics) => {
+      if (!analytics) return;
+      logEvent(analytics, 'cta_click', { label });
+    });
+
   return (
     <div className="flex flex-row gap-1 justify-center items-center">
       <a
@@ -8,6 +16,7 @@ const DownloadBadges = () => {
         target="_blank"
         rel="noopener noreferrer"
         className="inline-block transition-all duration-200 hover:scale-[1.02] hover:shadow-lg rounded-lg"
+        onClick={() => trackClick('hero_app_store_badge')}
       >
         <img
           src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&releaseDate=1609459200"
@@ -20,6 +29,7 @@ const DownloadBadges = () => {
         target="_blank"
         rel="noopener noreferrer"
         className="inline-block transition-all duration-200 hover:scale-[1.02] hover:shadow-lg rounded-lg"
+        onClick={() => trackClick('hero_google_play_badge')}
       >
         <img
           src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
