@@ -10,7 +10,6 @@ import BeforeAfter from './components/BeforeAfter';
 import Features from './components/Features';
 import Options from './components/Options';
 import FAQ from './components/FAQ';
-import AboutUs from './components/AboutUs';
 import Footer from './components/Footer';
 
 function App() {
