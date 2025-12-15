@@ -27,6 +27,11 @@ const Hero = () => {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
             Jedna&nbsp;fotka, <span className="gradient-text">10&nbsp;vteřin.</span> <br/> Přehled o&nbsp;jídle po celý den.
           </h1>
+          <div
+          className={`mb-6 transition-all duration-400 delay-150 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+        >
+          <DownloadBadges />
+        </div>
           <p className="text-base md:text-lg text-gray-700 mb-8 max-w-2xl mx-auto leading-relaxed">
           Jedna fotka stačí. Kalori spočítá vše za vás. Bez zdlouhavého zapisování, bez vážení, bez stresu.
           </p>
@@ -46,11 +51,7 @@ const Hero = () => {
           </div>
         </div>
         
-        <div
-          className={`mb-6 transition-all duration-400 delay-150 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
-        >
-          <DownloadBadges />
-        </div>
+      
         
         <div
           className={`mt-8 transition-all duration-400 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
