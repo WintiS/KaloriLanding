@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import QrCodeModal from './QrCodeModal';
 
 const navLinks = [
   { label: 'Domů', href: '#hero' },
@@ -11,6 +12,7 @@ const navLinks = [
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
+  const [isQrModalOpen, setIsQrModalOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -28,6 +30,14 @@ const Header = () => {
 
   const handleClosePopup = () => {
     setShowPopup(false);
+  };
+
+  const handleOpenQrModal = () => {
+    setIsQrModalOpen(true);
+  };
+
+  const handleCloseQrModal = () => {
+    setIsQrModalOpen(false);
   };
 
   const toggleMenu = () => {
@@ -163,7 +173,8 @@ const Header = () => {
                 Stačí fotka.
               </p>
               <div className="transition-all duration-400 delay-150 flex justify-center">
-                <div className="flex flex-row gap-0 items-center">
+                <div className="flex flex-col items-center gap-2">
+                  <div className="flex flex-row gap-0 items-center">
                   <a
                     href="https://apps.apple.com/us/app/kalori-ai-kalorické-tabulky/id6746693207"
                     target="_blank"
@@ -188,12 +199,21 @@ const Header = () => {
                       className="h-[60px] sm:h-[88px] w-auto rounded-lg"
                     />
                   </a>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={handleOpenQrModal}
+                    className="inline-flex items-center justify-center min-h-[52px] px-6 py-3 rounded-xl border border-primary/30 bg-primary/10 text-base md:text-lg font-semibold text-gray-900 hover:bg-primary/20 hover:border-primary/50 transition-all duration-200 shadow-sm hover:shadow-md"
+                  >
+                    Jsem na PC / tabletu
+                  </button>
                 </div>
               </div>
             </div>
           </div>
         </div>
       )}
+      <QrCodeModal isOpen={isQrModalOpen} onClose={handleCloseQrModal} />
     </>
   );
 };
